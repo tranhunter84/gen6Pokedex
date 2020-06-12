@@ -17,7 +17,7 @@ import time
 #creates an array for all pokemon data separating VIA commas
 #sorts the data into respective lists
 def getData():
-    text_file=open("folderPath+pokemonDatabase.txt", "r")
+    text_file=open("someDirectory+pokemonDatabase.txt", "r")
     lines=text_file.read().split(',')
     text_file.close()
 
