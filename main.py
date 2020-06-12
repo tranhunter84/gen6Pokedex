@@ -88,9 +88,11 @@ def getData():
 getData()
 
 #lets user search for a pokemon
-rawSearch=input('Enter a Pokemon Name. ').lower()
-caps=(rawSearch).upper()
-
+search=input('Enter a Pokemon Name. ')
+searchLength=len(search)
+upper=search.upper()
+lower=search.lower()
+search=upper[0]+lower[1:(searchLength)]
 print(search)
 
 #ends program if user does not provide valid pokemon name
