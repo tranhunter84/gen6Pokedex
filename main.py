@@ -17,7 +17,7 @@ import time
 #creates an array for all pokemon data separating VIA commas
 #sorts the data into respective lists
 def getData():
-    text_file=open("/Users/huntertran/PycharmProjects/gen6Pokedex/pokemonDatabase.txt", "r")
+    text_file=open("/+somePath+/gen6Pokedex/pokemonDatabase.txt", "r")
     lines=text_file.read().split(',')
     text_file.close()
 
