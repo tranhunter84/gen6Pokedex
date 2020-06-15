@@ -17,7 +17,7 @@ import time
 #creates an array for all pokemon data separating VIA commas
 #sorts the data into respective lists
 def getData():
-    text_file=open("someDirectory+pokemonDatabase.txt", "r")
+    text_file=open("/Users/huntertran/PycharmProjects/gen6Pokedex/pokemonDatabase.txt", "r")
     lines=text_file.read().split(',')
     text_file.close()
 
@@ -42,10 +42,10 @@ def getData():
 #determines which list to add each 'lines' item into
 #sorts and moves everything from the 'lines' array into the lists
     for i in range(lineNum):
-        if i==(13+(nameNum*12)): 
+        if i==(13+(nameNum*12)):
             name.append(lines[i])
             nameNum+=1
-        elif i==(14+(type1Num*12)): 
+        elif i==(14+(type1Num*12)):
             type1.append(lines[i])
             type1Num+=1
         elif i==(15+(type2Num*12)):
@@ -59,7 +59,7 @@ def getData():
             hpNum+=1
         elif i==(18+(attackNum*12)):
             attack.append(lines[i])
-            attackNum+=1        
+            attackNum+=1
         elif i==(19+(defenseNum*12)):
             defense.append(lines[i])
             defenseNum+=1
@@ -71,13 +71,13 @@ def getData():
             sDefNum+=1
         elif i==(22+(speedNum*12)):
             speed.append(lines[i])
-            speedNum+=1         
+            speedNum+=1
         elif i==(23+(generationNum*12)):
             generation.append(lines[i])
             generationNum+=1
         elif i==(24+(legendaryNum*12)):
             legendary.append(lines[i])
-            legendaryNum+=1   
+            legendaryNum+=1
 #loop ends when all items have been moved into the lists
         elif i==9612:
             break
@@ -93,7 +93,6 @@ searchLength=len(search)
 upper=search.upper()
 lower=search.lower()
 search=upper[0]+lower[1:(searchLength)]
-print(search)
 
 #ends program if user does not provide valid pokemon name
 if search not in name:
